@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/index.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("HecCckLhzcyhLtCYd");
+        })();
+    </script>
+</head>
+<body>
+    <form id="contact-form">
+        <div class="form-control">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+        </div>
+        <div class="form-control">
+            <input id="companyName" type="text" name="company" placeholder="Company Name" required>
+        </div>
+        <div class="form-control">
+            <textarea id="message" placeholder="Draft Message" type="text" name="message" required></textarea>
+        </div>
+        <input id="btn" onclick="sendMail()" type="submit" value="Send" class="btn btn-primary">
+    </form>
+</body>
+
+</html>
